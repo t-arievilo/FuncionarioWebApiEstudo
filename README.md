@@ -1,86 +1,78 @@
-🧑‍💼 FuncionarioWebApiEstudo
-API REST criada como projeto de estudo para gerenciamento de funcionários. O sistema permite cadastrar, consultar, atualizar e deletar registros de funcionários com informações como nome, sobrenome, turno, departamento e status de atividade.
+# FuncionarioWebApi
 
-🚀 Tecnologias utilizadas
-.NET 7 / ASP.NET Core Web API
+Uma API desenvolvida em ASP.NET Core com Entity Framework Core para gerenciamento de funcionários, criada como projeto de estudo.
 
-Entity Framework Core
+## 🔧 Tecnologias Utilizadas
 
-SQL Server (via EF migrations)
+- ASP.NET Core
+- Entity Framework Core
+- SQL Server
+- Swagger (para documentação da API)
+- AutoMapper
+- Git
 
-AutoMapper
+## 📦 Funcionalidades
 
-Swagger (Swashbuckle)
+- ✅ Cadastro de funcionários
+- 🔍 Consulta de todos os funcionários
+- 🧾 Consulta de funcionário por ID
+- ✏️ Atualização de dados de um funcionário
+- 🗑️ Exclusão lógica de funcionário
+- 🔁 Enum para Turno e Departamento, retornando nome amigável via JSON
 
-JSON Enum Serialization
+## 📁 Estrutura do Projeto
 
-Git + GitHub
+```
+FuncionarioWebApi/
+├── Controllers/
+├── Data/
+├── Dtos/
+├── Enums/
+├── Migrations/
+├── Models/
+├── Profiles/
+├── Services/
+└── Program.cs / Startup.cs
+```
 
-📁 Estrutura do Projeto
-nginx
-Copiar
-Editar
-FuncionarioWebApi
-│
-├── Controllers              # Endpoints da API
-├── Data                    # ApplicationDbContext e migrations
-├── Enums                   # Tipos de Turno e Departamento
-├── Models                  # Modelo Funcionario
-├── Services                # Lógica de negócio (FuncionarioService)
-├── Program.cs              # Configuração principal
-└── appsettings.json        # Configurações de ambiente
-⚙️ Funcionalidades
- Cadastrar funcionário
+## 🚀 Como executar o projeto
 
- Listar todos os funcionários
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/t-arievilo/FuncionarioWebApiEstudo.git
+   ```
 
- Buscar funcionário por ID
+2. Acesse a pasta do projeto:
+   ```bash
+   cd FuncionarioWebApiEstudo
+   ```
 
- Atualizar dados de um funcionário
+3. Configure o banco de dados no `appsettings.json`.
 
- Deletar funcionário
+4. Rode as migrations:
+   ```bash
+   dotnet ef database update
+   ```
 
- Utilização de enums com serialização de texto via [JsonConverter]
+5. Execute o projeto:
+   ```bash
+   dotnet run
+   ```
 
- Migrations com EF Core para criação do banco
+6. Acesse o Swagger:
+   ```
+   https://localhost:{porta}/swagger
+   ```
 
-🧪 Rodando o projeto localmente
-Clone o repositório:
+## 📌 Observações
 
-bash
-Copiar
-Editar
-git clone https://github.com/t-arievilo/FuncionarioWebApiEstudo.git
-cd FuncionarioWebApiEstudo
-Restaure os pacotes:
+- Este projeto foi desenvolvido com fins educacionais.
+- A exclusão de funcionários é lógica, mantendo o dado no banco.
 
-bash
-Copiar
-Editar
-dotnet restore
-Aplique as migrations no banco de dados local:
+## 🤝 Contribuição
 
-bash
-Copiar
-Editar
-dotnet ef database update
-Rode o projeto:
+Sinta-se livre para abrir issues ou enviar pull requests com melhorias.
 
-bash
-Copiar
-Editar
-dotnet run
-Acesse a documentação da API (Swagger):
+## 🧑‍💻 Autor
 
-bash
-Copiar
-Editar
-https://localhost:{porta}/swagger
-📌 Observações
-A pasta .vs/, arquivos de build e configs locais estão ignorados no .gitignore.
-
-Certifique-se de ter o SQL Server local rodando e configurado corretamente no appsettings.json.
-
-✍️ Autor
-Feito com 💻 por Thiago
-Projeto de estudo pessoal como parte da jornada de aprendizado em ASP.NET Core.
+- **Thiago** – [@t-arievilo](https://github.com/t-arievilo)
