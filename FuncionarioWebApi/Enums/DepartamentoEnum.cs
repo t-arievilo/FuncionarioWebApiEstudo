@@ -9,7 +9,7 @@ namespace FuncionarioWebApi.Enums
         Compras,
         Financeiro,
         Zeladoria,
-        Produção,
-        Almoraxarifado
+        Producao,
+        Almoxarifado
     }
 }
